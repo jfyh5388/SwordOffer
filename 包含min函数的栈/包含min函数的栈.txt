@@ -1,0 +1,31 @@
+class Solution {
+public:
+    int minnum=0;
+    stack<int> st;
+    stack<int> minst;
+    void push(int value) {        
+        if(st.empty())
+        {
+            minnum=value;
+        }
+        else
+        {
+            if(value<minnum)
+            {
+                minnum=value;
+            }
+        }        
+        st.push(value);
+        minst.push(minnum);
+    }
+    void pop() {
+        st.pop();
+        minst.pop();
+    }
+    int top() {
+        return st.top();
+    }
+    int min() {
+        return minst.top();
+    }
+};

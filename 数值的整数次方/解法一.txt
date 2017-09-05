@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+int zeroerror;
+//class zeroerror{};
+class Solution {
+public:
+    double Power(double base, int exponent) {
+    	double ans=1;
+        int exp=0;
+        int expzheng=0;
+		if(exponent==0)
+			return 1;
+		if(exponent==1)
+			return base;
+        if(exponent<0)
+		{
+			if(base>=0&&base<2e-15||base<=0&&base>-2e-15)
+				throw zeroerror;
+            expzheng=-exponent;
+		}
+        else
+            expzheng=exponent;
+        if(expzheng%2==0)
+        {
+			exp=expzheng>>1;
+			ans=Power(base,exp)*Power(base,exp);
+		}
+        else
+		{
+            exp=expzheng>>1;
+			ans=Power(base,exp)*Power(base,exp)*base;
+		}        
+        if(exponent<0)
+            ans=1/ans;
+        return ans;
+    }
+};
+int main()
+{
+	Solution so;
+	double ba=2;
+	int mi=-3;
+	try
+	{
+		cout<<so.Power(ba,mi)<<endl;
+	}
+	catch (int)
+	{
+		cout<<"invalid input"<<endl;
+	}
+	return 0;
+}

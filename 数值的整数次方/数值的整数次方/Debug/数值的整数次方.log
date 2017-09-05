@@ -1,0 +1,22 @@
+﻿生成启动时间为 2016/12/22 17:03:32。
+     1>项目“U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\数值的整数次方\数值的整数次方.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\数值的整数次方.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "数值的整数次方.cpp"
+         数值的整数次方.cpp
+     1>u:\softwares\visual studio 2013\projects\剑指offer\数值的整数次方\数值的整数次方\数值的整数次方.cpp(11): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\Debug\数值的整数次方.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\数值的整数次方.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\Debug\数值的整数次方.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\Debug\数值的整数次方.lib" /MACHINE:X86 "Debug\数值的整数次方.obj"
+         LINK : 没有找到 U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\Debug\数值的整数次方.exe 或上一个增量链接没有生成它；正在执行完全链接
+         数值的整数次方.vcxproj -> U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\Debug\数值的整数次方.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\Debug\数值的整数次方.exe;#1" /manifest "Debug\数值的整数次方.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Debug\数值的整数次方.unsuccessfulbuild”。
+         正在对“Debug\数值的整数次方.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“U:\Softwares\Visual Studio 2013\projects\剑指offer\数值的整数次方\数值的整数次方\数值的整数次方.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.99

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "数值的整数次方", "数值的整数次方\数值的整数次方.vcxproj", "{B5745667-4056-463D-9B72-BD90BF1E41B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5745667-4056-463D-9B72-BD90BF1E41B4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B5745667-4056-463D-9B72-BD90BF1E41B4}.Debug|Win32.Build.0 = Debug|Win32
+		{B5745667-4056-463D-9B72-BD90BF1E41B4}.Release|Win32.ActiveCfg = Release|Win32
+		{B5745667-4056-463D-9B72-BD90BF1E41B4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
