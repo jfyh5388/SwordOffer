@@ -1,0 +1,117 @@
+#include<iostream>
+#include<time.h>
+#include<vector>
+using namespace std;
+bool g_bInputInvalid = false;
+int RandomInRange(int start, int end)
+{
+	srand(static_cast<unsigned int> (time(NULL)));//srand函数的参数为unsigned int,将参数类型转换为unsigned int
+	return rand() % (end - start + 1) + start;
+
+}
+int Partition(vector<int>& data, int length, int start, int end)
+{
+	//下面这个产生异常的方法很好 
+	if (length <= 0 || start < 0 || end >= length)
+		throw new exception("Invalid Parameters");
+
+	//找一个令旗标； 
+	int index = end;
+	//swap(data[index], data[end]);
+	//开始遍历分区;
+	int small = start - 1;
+	for (index = start; index < end; index++)
+	{
+		if (data[index] < data[end])
+		{
+			small++;
+			if (small != index)//说明small与index之间有大于data[end]的元素； 
+				swap(data[index], data[small]);//其实不用判断，直接交换就可以了;
+		}
+	}
+	small++; 
+	swap(data[small], data[end]);
+	return small;
+}
+void QuickSort(vector<int>& data, int length, int start, int end)
+{
+	if (start == end)
+		return;
+	int index = Partition(data, length, start, end);
+	if (index > start)
+		QuickSort(data, length, start, index - 1);
+	if (index < end)
+		QuickSort(data, length, index + 1, end);
+}
+bool CheckInvalidArray(int length)
+{
+	g_bInputInvalid = false;
+	if (length <= 0)
+		g_bInputInvalid = true;
+	return g_bInputInvalid;
+}
+bool CheckMoreThanHalf(vector<int> numbers, int length, int number)
+{
+	int times = 0;
+	for (int i = 0; i < length; ++i)
+	{
+		if (numbers[i] == number)
+			times++;
+	}
+	bool isMoreThanHalf = true;
+	if (times * 2 <= length)
+	{
+		g_bInputInvalid = true;
+		isMoreThanHalf = false;
+	}
+	return isMoreThanHalf;
+}
+int MoreThanHalfNum(vector<int>& numbers)
+{
+	int length = numbers.size();
+	if (CheckInvalidArray(length))
+		return 0;
+	int middle = length >> 1;
+	int start = 0;
+	int end = length - 1;
+	QuickSort(numbers, length, start, end);
+	/*while (index != middle)
+	{
+		if (index > middle)
+		{
+			end = index - 1;
+			index = Partition(numbers, length, start, end);
+		}
+		else
+		{
+			start = index + 1;
+			index = Partition(numbers, length, start, end);
+		}
+	}*/
+	int result = numbers[middle];
+	if (!CheckMoreThanHalf(numbers, length, result))
+		result = 0;
+	return result;
+}
+
+
+int main()
+{
+	vector<int> data;
+	data.push_back(5);
+	data.push_back(2);
+	data.push_back(3);
+	data.push_back(1);
+	data.push_back(9);
+	data.push_back(7);
+	data.push_back(6);
+	data.push_back(4);
+	data.push_back(8);
+	cout << MoreThanHalfNum(data) << endl;
+	for (int i = 0; i < data.size(); i++)
+	{
+		cout << data[i]<<" ";
+	}
+	system("pause");
+	return 0;
+}
