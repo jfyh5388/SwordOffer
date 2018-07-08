@@ -3,12 +3,6 @@
 #include<vector>
 using namespace std;
 bool g_bInputInvalid = false;
-int RandomInRange(int start, int end)
-{
-	srand(static_cast<unsigned int> (time(NULL)));//srand函数的参数为unsigned int,将参数类型转换为unsigned int
-	return rand() % (end - start + 1) + start;
-
-}
 int Partition(vector<int>& data, int length, int start, int end)
 {
 	//下面这个产生异常的方法很好 
